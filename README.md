@@ -1,10 +1,10 @@
-# 8B Production — GitHub Site v4
+# 8B Production — Portfolio Update
 
 Current build includes:
 - Official 8B Production logo
 - Six photography portfolio images
 - KVRT + TEZRIN artist images
-- Instagram: @8b.production
+- Instagram: @8b.productions
 - Booking email: booking@8bproduction.com
 - Full Book a Shoot inquiry form
 
@@ -25,10 +25,16 @@ After the site is live:
 5. Save.
 6. Preview and test the full site before pointing `8bproduction.com` to GitHub Pages.
 
-## Optional next additions
-- Pricing / package page
-- Separate photography galleries
-- Testimonials
-- Instagram feed
-- FAQ
-- Custom domain configuration
+## Portfolio update
+
+- `portfolio.html`: 16 curated photographs, category filters and an accessible enlargement dialog.
+- `services.html`: photography services, inquiry process and FAQ.
+- Existing homepage, music, contact form, domain and Instagram link preserved.
+- Uploaded originals are untouched; gallery copies are resized for web delivery.
+- Run `python build.py` to validate local links and stage the static preview.
+
+## Apply to the existing GitHub Pages site
+
+Upload the contents of the provided ZIP to the repository root, keeping the `assets` folder structure. Commit to the branch configured in GitHub Pages. Keep the existing `CNAME`. No DNS changes are needed.
+
+The booking form still uses the original FormSubmit destination. Its activation and email delivery must be checked by the owner; no test inquiry was sent during this update.
