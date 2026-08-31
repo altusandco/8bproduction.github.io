@@ -4,7 +4,7 @@
 .artist-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .4s ease;filter:saturate(.9)}
 .artist-card:hover .artist-image img{transform:scale(1.025);filter:saturate(1.05)}
 .artist-card:first-child .artist-image img{object-position:center 18%}
-.artist-card:nth-child(2) .artist-image img{object-position:center center}
+.artist-card:nth-child(2) .artist-image img{object-position:center 8%}
 @media(max-width:800px){.artist-image{height:500px}}
 
 
