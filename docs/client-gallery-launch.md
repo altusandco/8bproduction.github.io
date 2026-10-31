@@ -1,32 +1,29 @@
-# Client galleries — staged for launch
+# 8B Production client galleries
 
-## Selected client access
+Client Galleries is integrated with the existing photography website. The website entry page hands gallery codes to the connected delivery service; clients use a private link and a gallery-specific password, with no account required.
 
-Clients will use a private gallery link and a gallery-specific password. They will not need an account for the production delivery flow. The current Sites build remains owner-private, so its outer preview access gate still requires the owner’s ChatGPT sign-in. Do not publish the original private prototype as a shortcut.
+## Live service
 
-## Implemented privately
+- Client entrance: https://eightb-client-delivery.info-c79e.chatgpt.site
+- Owner studio: https://eightb-client-delivery.info-c79e.chatgpt.site/admin
+- Direct gallery links: `/g/<gallery-id>` on that service.
 
-The working build at https://eightb-client-galleries.info-c79e.chatgpt.site now includes:
+The owner studio requires the configured 8B owner's ChatGPT sign-in. Clients are not asked to sign in to ChatGPT. It supports gallery creation, original uploads, preview generation, covers, password changes, download controls, expiration, revocation, and copying delivery links/codes/passwords.
 
-- `/admin`: an owner dashboard to create galleries, upload original JPG/PNG/WebP files, generate previews, choose covers, manage downloads, set expiration, change passwords, revoke access, and copy delivery details.
-- `/g/<gallery-id>`: a server-checked gallery password, responsive grid, enlarged viewing, local-browser favorites, individual original downloads, and streamed gallery/favorites ZIP downloads.
-- Private file storage and database records. Every preview, original, and ZIP request checks gallery authorization, state, expiration, and password version.
-- Hashed passwords and session tokens, HttpOnly/SameSite cookies, failed-password rate limits, and owner-only write authorization.
-- The original stock-photo design sample at `/demo/index.html`.
+Every gallery record, preview image, original download, and ZIP request is checked server-side. Original files are private, passwords and session tokens are hashed, and client sessions use HttpOnly/SameSite cookies. The hosted adapter accepts only the configured owner identity for administrative actions. No validation endpoint or alternate service credential is deployed publicly.
 
-Only sample imagery is included. There are no real client deliveries. Backend checks passed against real local D1/R2 bindings, including cross-gallery restrictions, password rotation, revocation, expiry, download controls, logout, and ZIP integrity. Client password entry, viewing, locking, favorites, and download choices were checked in desktop and phone browser layouts.
+The original prototype remains owner-private at https://eightb-client-galleries.info-c79e.chatgpt.site and uses separate storage. Its public demo assets are not included in production.
 
-## What this GitHub branch changes
+## Website configuration
 
-This branch adds the branded `client-galleries.html` entry page and Client Galleries navigation links on the existing home, portfolio, and services pages. The code-handoff form is enabled only after an HTTPS gallery-service origin is configured in `assets/js/client-galleries-config.js`.
+`assets/js/client-galleries-config.js` contains only the public HTTPS service origin and the `/g/` path prefix. Never put private photo URLs, gallery passwords, client records, storage tokens, or other credentials in this public GitHub repository.
 
-The service origin remains blank, and this PR remains a draft. The upload dashboard and protected file service live in the private Sites source repository, not in this public website repository. No client files, gallery passwords, credentials, CNAME, DNS, or booking-form destinations are changed here.
+The CNAME, DNS, existing portfolio photographs, and booking-form destination are unchanged. Client delivery runs on the connected service; GitHub Pages continues to serve the main website and gallery entry page.
 
-## Remaining production activation
+## Validation
 
-1. Review the private studio and client flow using sample photographs.
-2. Approve a separate client-facing service deployment that accepts anonymous visitors at the outer hosting layer while retaining gallery-password checks and owner-only administration. Keep the original prototype owner-private.
-3. Confirm production storage/hosting terms, configure the approved HTTPS origin in this branch, and merge the entry-page/navigation integration only when real delivery access is working.
-4. If desired, connect an approved branded subdomain such as `gallery.8bproduction.com`. The main public website can stay on its current hosting.
-
-Do not upload private client images to this public GitHub repository. GitHub Pages serves the website entry page; the connected service protects and delivers client collections.
+- 63 checks against real local D1/R2 bindings, covering owner authorization, password changes, gallery isolation, expiration/revocation, download controls, logout, rate limits, and ZIP creation.
+- Hosted production uploads tested with sample photographs before enabling public access.
+- Anonymous browser verified the gallery-code handoff, password-only access, and actual JPG/ZIP downloads. Downloaded originals matched the uploaded bytes and ZIP CRC checks passed.
+- Temporary validation routes were removed and verified absent before public client access.
+- The studio supports 20 MB per image and 250 photographs / 1 GB per gallery. Favorites remain local to the client's browser.
