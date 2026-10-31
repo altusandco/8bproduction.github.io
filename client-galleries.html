@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your 8B Production client gallery. View your final photographs and download your delivery.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Client Galleries — 8B Production</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/client-galleries.css">
+  <script src="assets/js/client-galleries-config.js" defer></script>
+  <script src="assets/js/client-galleries.js" defer></script>
+</head>
+<body class="client-galleries-page">
+  <a class="gallery-skip" href="#gallery-access">Skip to gallery access</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="8B Production home"><img src="assets/images/8b-logo.jpg" alt="8B Production logo"></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#music">Music</a>
+      <a href="index.html#about">About</a>
+      <a href="https://www.instagram.com/8b.productions/" target="_blank" rel="noopener">Instagram</a>
+      <a href="client-galleries.html" aria-current="page">Client Galleries</a>
+      <a class="nav-cta" href="index.html#contact">Book a Shoot</a>
+    </nav>
+  </header>
+  <main>
+    <section class="client-intro" aria-labelledby="gallery-heading">
+      <div class="client-intro-top"><a href="index.html">← Back to 8B</a><span>8B / CLIENT DELIVERY</span></div>
+      <p class="eyebrow">A SPACE FOR YOUR STORY</p>
+      <h1 id="gallery-heading">YOUR MOMENTS.<br><span>ALL YOURS.</span></h1>
+      <div class="client-intro-bottom"><p>The final edit. The little details. The moments you’ll come back to.<br>Your photographs, together in one place.</p><span>ATLANTA, GA<br>PHOTOGRAPHY BY 8B PRODUCTION</span></div>
+    </section>
+    <section class="client-access" id="gallery-access" aria-labelledby="access-heading">
+      <div class="client-access-copy"><p class="eyebrow">01 / FIND YOUR GALLERY</p><h2 id="access-heading">Good things<br>are waiting.</h2><p>Use the private gallery link in your delivery email to open your photographs.</p><p id="gallery-code-intro" hidden>Have a gallery code? Enter it here to continue to your gallery.</p><p class="client-privacy-note"><span aria-hidden="true">↗</span> Your gallery is personal. Client collections aren’t listed publicly.</p></div>
+      <div class="client-access-card">
+        <p class="client-card-label">YOUR CLIENT GALLERY</p>
+        <form id="gallery-code-form" hidden>
+          <label for="gallery-code">Gallery code</label>
+          <input id="gallery-code" name="gallery" type="text" autocomplete="off" spellcheck="false" autocapitalize="none" maxlength="80" pattern="[A-Za-z0-9_-]{4,80}" placeholder="The code in your delivery email" aria-describedby="gallery-code-note gallery-code-error" required>
+          <p id="gallery-code-note">Enter only the code. Your gallery will open securely in the next step.</p>
+          <button type="submit" class="btn btn-light">Open my gallery <span aria-hidden="true">→</span></button>
+          <p id="gallery-code-error" class="client-form-error" role="status" aria-live="polite"></p>
+        </form>
+        <div id="gallery-access-pending"><h3>Your delivery starts<br>with a private link.</h3><p>If you’ve received your delivery email, open the gallery link included there.</p><p>Gallery-code access is being prepared. For help with a delivery, contact 8B below.</p></div>
+        <div class="client-card-help"><span>NEED A HAND?</span><a href="mailto:booking@8bproduction.com">booking@8bproduction.com <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+    <section class="client-process" aria-label="Your gallery experience"><div><span>01</span><h3>Open your gallery.</h3><p>Follow your delivery link to your collection.</p></div><div><span>02</span><h3>Take it all in.</h3><p>Browse the edit and enlarge the moments you love.</p></div><div><span>03</span><h3>Make them yours.</h3><p>Download your delivered images to keep and share.</p></div></section>
+    <div class="client-signoff"><span class="client-eight" aria-hidden="true">8</span><p>THE GAME’S NOT OVER ’TIL YOU CALL THE 8.</p></div>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><img src="assets/images/8b-logo.jpg" alt="8B Production logo"></a><div class="footer-meta"><a href="https://www.instagram.com/8b.productions/" target="_blank" rel="noopener">@8b.productions</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="client-galleries.html">Client Galleries</a><span>Atlanta, GA</span><span>© <span id="year"></span> 8B Production</span></div></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
