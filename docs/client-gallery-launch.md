@@ -1,26 +1,32 @@
-# Client-gallery integration — draft for review
+# Client galleries — staged for launch
 
-## Included in this branch
+## Selected client access
 
-- A Client Galleries navigation item on the existing home, portfolio, and services pages.
-- A responsive `client-galleries.html` entry page using the current 8B logo, black/cream palette, Oswald/Inter fonts, and booking contact.
-- A gallery-code handoff that is enabled only after an HTTPS gallery-service origin is configured.
-- A responsive navigation adjustment for the additional link.
+Clients will use a private gallery link and a gallery-specific password. They will not need an account for the production delivery flow. The current Sites build remains owner-private, so its outer preview access gate still requires the owner’s ChatGPT sign-in. Do not publish the original private prototype as a shortcut.
 
-This is the website entry point, not the completed gallery backend. Do not merge it as a full client-delivery launch. No actual gallery service is configured; the entry page explains that code access is being prepared and directs existing clients to their delivery link or booking email. It does not collect passwords or pretend to authenticate clients.
+## Implemented privately
 
-The working sample gallery remains owner-private at https://eightb-client-galleries.info-c79e.chatgpt.site. No client files are added to this public repository.
+The working build at https://eightb-client-galleries.info-c79e.chatgpt.site now includes:
 
-## Required before activating real client deliveries
+- `/admin`: an owner dashboard to create galleries, upload original JPG/PNG/WebP files, generate previews, choose covers, manage downloads, set expiration, change passwords, revoke access, and copy delivery details.
+- `/g/<gallery-id>`: a server-checked gallery password, responsive grid, enlarged viewing, local-browser favorites, individual original downloads, and streamed gallery/favorites ZIP downloads.
+- Private file storage and database records. Every preview, original, and ZIP request checks gallery authorization, state, expiration, and password version.
+- Hashed passwords and session tokens, HttpOnly/SameSite cookies, failed-password rate limits, and owner-only write authorization.
+- The original stock-photo design sample at `/demo/index.html`.
 
-1. Select the access experience: gallery link + password, email login, or invited ChatGPT sign-in. A private Sites deployment currently requires ChatGPT sign-in. A password-only experience needs a service that supports that access model.
-2. Connect private photo storage and a database. GitHub Pages serves the website but does not provide server-side password checks, uploads, or private original files.
-3. Implement an authenticated owner dashboard to create galleries, upload edited images, choose covers, control downloads, expire galleries, and revoke access.
-4. Authorize every image, thumbnail, individual download, and ZIP server-side. A hidden gallery page, JavaScript password check, or difficult-to-guess public file URL is not sufficient protection.
-5. Test that one client cannot access another gallery, direct original-file requests are blocked, expiration/revocation takes effect, and downloads work on iPhone and desktop.
-6. Configure only the public HTTPS service origin in `assets/js/client-galleries-config.js`. Keep credentials and client records out of this repository.
-7. Review the final working delivery flow and costs, then connect an approved branded subdomain if desired and merge the website navigation change.
+Only sample imagery is included. There are no real client deliveries. Backend checks passed against real local D1/R2 bindings, including cross-gallery restrictions, password rotation, revocation, expiry, download controls, logout, and ZIP integrity. Client password entry, viewing, locking, favorites, and download choices were checked in desktop and phone browser layouts.
 
-## Scope and publication
+## What this GitHub branch changes
 
-The CNAME, main website hosting, booking form, portfolio image files, and DNS are unchanged. The branch is staged for review and must not be presented as launched client-gallery functionality. Client-specific uploads and access controls remain to be implemented.
+This branch adds the branded `client-galleries.html` entry page and Client Galleries navigation links on the existing home, portfolio, and services pages. The code-handoff form is enabled only after an HTTPS gallery-service origin is configured in `assets/js/client-galleries-config.js`.
+
+The service origin remains blank, and this PR remains a draft. The upload dashboard and protected file service live in the private Sites source repository, not in this public website repository. No client files, gallery passwords, credentials, CNAME, DNS, or booking-form destinations are changed here.
+
+## Remaining production activation
+
+1. Review the private studio and client flow using sample photographs.
+2. Approve a separate client-facing service deployment that accepts anonymous visitors at the outer hosting layer while retaining gallery-password checks and owner-only administration. Keep the original prototype owner-private.
+3. Confirm production storage/hosting terms, configure the approved HTTPS origin in this branch, and merge the entry-page/navigation integration only when real delivery access is working.
+4. If desired, connect an approved branded subdomain such as `gallery.8bproduction.com`. The main public website can stay on its current hosting.
+
+Do not upload private client images to this public GitHub repository. GitHub Pages serves the website entry page; the connected service protects and delivers client collections.
