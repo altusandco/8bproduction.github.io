@@ -1,0 +1,415 @@
+{
+  "new_photographs": [
+    {
+      "source": "IMG_6098.JPG",
+      "code": "6098",
+      "category": "portraits",
+      "alt": "White and pink, close-up studio portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5734.JPG",
+      "code": "5734",
+      "category": "portraits",
+      "alt": "White corset and pink skirt, full-length studio portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5729.JPG",
+      "code": "5729",
+      "category": "portraits",
+      "alt": "Hands to hair, creative studio portrait",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_5775.JPG",
+      "code": "5775",
+      "category": "portraits",
+      "alt": "Low pose against a white studio backdrop",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5289.JPG",
+      "code": "5289",
+      "category": "portraits",
+      "alt": "Black and white styling, full-length portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5261.JPG",
+      "code": "5261",
+      "category": "portraits",
+      "alt": "Braided hair, close-up portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_3119.JPG",
+      "code": "3119",
+      "category": "portraits",
+      "alt": "Pink dress, Atlanta balcony portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_3120.JPG",
+      "code": "3120",
+      "category": "portraits",
+      "alt": "Atlanta skyline, lifestyle portrait",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_3184.JPG",
+      "code": "3184",
+      "category": "portraits",
+      "alt": "Red swimwear, city lights portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_4588.JPG",
+      "code": "4588",
+      "category": "fashion",
+      "alt": "Red handbag, studio fashion portrait",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_4652.JPG",
+      "code": "4652",
+      "category": "fashion",
+      "alt": "Fur hat and red handbag, fashion detail",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_4639.JPG",
+      "code": "4639",
+      "category": "fashion",
+      "alt": "Full-length fashion portrait with a red handbag",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_4102.JPG",
+      "code": "4102",
+      "category": "fashion",
+      "alt": "Backstage portrait in a camel coat",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_4161.JPG",
+      "code": "4161",
+      "category": "fashion",
+      "alt": "Profile portrait at Atlanta Fashion Week",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_4125.JPG",
+      "code": "4125",
+      "category": "fashion",
+      "alt": "Tailored looks, fashion presentation",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_4177.JPG",
+      "code": "4177",
+      "category": "fashion",
+      "alt": "Formalwear lineup at Atlanta Fashion Week",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_4332.JPG",
+      "code": "4332",
+      "category": "fashion",
+      "alt": "Pattern and color at Atlanta Fashion Week",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_4980.JPG",
+      "code": "4980",
+      "category": "fashion",
+      "alt": "Red sculptural hat, fashion presentation",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_5017.JPG",
+      "code": "5017",
+      "category": "fashion",
+      "alt": "White top and denim, fashion presentation",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5075.JPG",
+      "code": "5075",
+      "category": "fashion",
+      "alt": "Orange print, fashion presentation",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5110.JPG",
+      "code": "5110",
+      "category": "fashion",
+      "alt": "Black styling and sunglasses, fashion presentation",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_5147.JPG",
+      "code": "5147",
+      "category": "fashion",
+      "alt": "Graphic black styling at Atlanta Fashion Week",
+      "orientation": 8,
+      "dimensions": {
+        "720": [
+          480,
+          720
+        ],
+        "1600": [
+          1067,
+          1600
+        ]
+      }
+    },
+    {
+      "source": "IMG_5161.JPG",
+      "code": "5161",
+      "category": "fashion",
+      "alt": "Black textures, Atlanta Fashion Week",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    },
+    {
+      "source": "IMG_5203.JPG",
+      "code": "5203",
+      "category": "fashion",
+      "alt": "Neutral tones, fashion lineup",
+      "orientation": 1,
+      "dimensions": {
+        "720": [
+          720,
+          480
+        ],
+        "1600": [
+          1600,
+          1067
+        ]
+      }
+    }
+  ],
+  "existing_photographs_retained": 16,
+  "total": 40,
+  "note": "Web copies are upright and stripped of EXIF. Original Drive files are unchanged."
+}

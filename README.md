@@ -2,7 +2,7 @@
 
 Current build includes:
 - Official 8B Production logo
-- Six photography portfolio images
+- Six featured photography images and a refreshed homepage hero
 - KVRT + TEZRIN artist images
 - Instagram: @8b.productions
 - Booking email: booking@8bproduction.com
@@ -27,7 +27,7 @@ After the site is live:
 
 ## Portfolio update
 
-- `portfolio.html`: 16 curated photographs, category filters and an accessible enlargement dialog.
+- `portfolio.html`: 40 curated photographs, category filters and an accessible enlargement dialog with next/previous buttons and keyboard navigation.
 - `services.html`: photography services, inquiry process and FAQ.
 - Existing homepage, music, contact form, domain and Instagram link preserved.
 - Uploaded originals are untouched; gallery copies are resized for web delivery.
@@ -38,3 +38,11 @@ After the site is live:
 Upload the contents of the provided ZIP to the repository root, keeping the `assets` folder structure. Commit to the branch configured in GitHub Pages. Keep the existing `CNAME`. No DNS changes are needed.
 
 The booking form still uses the original FormSubmit destination. Its activation and email delivery must be checked by the owner; no test inquiry was sent during this update.
+
+## October 2026 photography refresh
+
+- Added 24 selected photographs to the existing 16-image portfolio.
+- Refreshed the homepage hero, six featured images and portrait feature.
+- Applied embedded camera orientation before exporting metadata-free WebP copies at two sizes. Source Drive files are unchanged.
+- Details of the selected source filenames and dimensions are recorded in `docs/portfolio-refresh.json`.
+- Validated desktop, 820px tablet and 390px phone layouts, category filters, enlargement controls and local image references.
