@@ -54,6 +54,14 @@
 /* Fit the client-gallery navigation item on tablets. */
 @media(max-width:1040px){.nav{position:fixed;inset:72px 0 auto 0;background:#050505;padding:30px 5vw 40px;display:none;flex-direction:column;align-items:flex-start;border-bottom:1px solid #222}.nav.open{display:flex}.menu-toggle{display:block}.site-header{height:72px}.brand{width:90px;height:55px}}
 
+/* Shared navigation for the dedicated Music, Videos, About and booking pages. */
+.nav{gap:22px}
+.nav .nav-cta[aria-current=page]{padding-bottom:11px}
+.site-skip{position:fixed;top:12px;left:12px;z-index:300;padding:12px 18px;background:#f1efe7;color:#111;transform:translateY(-180%)}
+.site-skip:focus{transform:none}
+.footer-meta{max-width:940px;justify-content:flex-end;line-height:1.7}
+@media(min-width:1041px) and (max-width:1200px){.nav{font-size:12px;gap:16px}}
+
 /* Selected photography: preserve each photograph's framing. */
 .home-refreshed .hero-media{background-image:url('../images/selected/8b-hero.webp');background-position:58% 30%}
 .home-refreshed .feature-image{min-height:0;aspect-ratio:4/5;overflow:hidden}

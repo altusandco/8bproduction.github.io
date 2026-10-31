@@ -46,3 +46,11 @@ The booking form still uses the original FormSubmit destination. Its activation 
 - Applied embedded camera orientation before exporting metadata-free WebP copies at two sizes. Source Drive files are unchanged.
 - Details of the selected source filenames and dimensions are recorded in `docs/portfolio-refresh.json`.
 - Validated desktop, 820px tablet and 390px phone layouts, category filters, enlargement controls and local image references.
+
+## Dedicated pages and music video
+
+- Music, Videos, About and Book a Shoot each have their own page.
+- KVRT uses the supplied IMG_3089.JPG portrait on the homepage and Music page.
+- INVIIN — SPACE 2 plays in the Videos page through its existing public Drive player.
+- All page navigation links point to the dedicated pages; the original homepage section IDs remain available.
+- Checked embedded playback, eight-page navigation, local asset links and responsive image widths. Verified 390px phone and 820px tablet layouts without horizontal overflow, the phone menu, and the new Music Video inquiry selection. No booking inquiry was submitted.

@@ -9,27 +9,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
 <link rel="canonical" href="https://8bproduction.com/" /><meta property="og:title" content="8B Production — Photography • Visuals • Media" /><meta property="og:description" content="Atlanta photography, visual production, media and music." /><meta property="og:image" content="https://8bproduction.com/assets/images/selected/8b-5161-1600.webp" /><meta property="og:type" content="website" /></head>
 <body class="home-refreshed">
+  <a class="site-skip" href="#main">Skip to content</a>
   <header class="site-header" id="top">
-    <a class="brand" href="index.html" aria-label="8B Production home">
-      <img src="assets/images/8b-logo.jpg" alt="8B Production logo" />
-    </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav">
+    <a class="brand" href="index.html" aria-label="8B Production home"><img src="assets/images/8b-logo.jpg" alt="8B Production logo" width="118" height="68"></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation">
       <a href="portfolio.html">Portfolio</a>
       <a href="services.html">Services</a>
-      <a href="index.html#music">Music</a>
-      <a href="index.html#about">About</a>
+      <a href="videos.html">Videos</a>
+      <a href="music.html">Music</a>
+      <a href="about.html">About</a>
       <a href="https://www.instagram.com/8b.productions/" target="_blank" rel="noopener">Instagram</a>
       <a href="client-galleries.html">Client Galleries</a>
-      <a class="nav-cta" href="index.html#contact">Book a Shoot</a>
+      <a href="contact.html" class="nav-cta">Book a Shoot</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="hero-media"></div>
       <div class="hero-overlay"></div>
@@ -37,7 +36,7 @@
         <p class="eyebrow">ATLANTA • PHOTOGRAPHY • VISUALS • MEDIA</p>
         <h1>CREATE<br><span>SOMETHING</span><br>WORTH SEEING.</h1>
         <div class="hero-actions">
-          <a class="btn btn-light" href="#contact">Book a Shoot</a>
+          <a class="btn btn-light" href="contact.html">Book a Shoot</a>
           <a class="text-link" href="portfolio.html">Explore the portfolio <span>↘</span></a>
         </div>
       </div>
@@ -113,9 +112,11 @@
         <p class="eyebrow dark">FEATURED / PORTRAIT + FASHION</p>
         <h2>More than a photo.</h2>
         <p>From clean portraits to high-energy events, 8B builds images around personality, mood and intent.</p>
-        <a class="btn btn-dark" href="#contact">Book a Shoot</a>
+        <a class="btn btn-dark" href="contact.html">Book a Shoot</a>
       </div>
     </section>
+
+    <section class="home-film"><div class="home-film-heading"><p class="eyebrow">LATEST / MUSIC VIDEO</p><h2>INVIIN<br><span>SPACE 2.</span></h2><p>03:36 / MOVING IMAGES BY 8B</p><a class="text-link" href="videos.html">Explore videos ↗</a></div><div class="video-frame"><iframe src="https://drive.google.com/file/d/1_Hwz28zoqXqTXw6I2FD77F-N4FBjihuP/preview" title="INVIIN — SPACE 2 music video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></section>
 
     <section class="section music" id="music">
       <div class="section-label">03 / MUSIC</div>
@@ -125,7 +126,7 @@
       </div>
       <div class="artist-grid">
         <article class="artist-card reveal">
-          <div class="artist-image"><img src="assets/images/kvrt.jpg" alt="KVRT" loading="lazy"></div>
+          <div class="artist-image"><img src="assets/images/kvrt-2026-1440.webp" srcset="assets/images/kvrt-2026-720.webp 720w, assets/images/kvrt-2026-1440.webp 1440w" sizes="(max-width:800px) 90vw, 44vw" alt="KVRT in a black shirt and gold necklaces against a light backdrop" width="1440" height="960" loading="lazy" decoding="async"></div>
           <div class="artist-meta">
             <h3>KVRT</h3>
             <p>Artist • Producer • Engineer</p>
@@ -139,6 +140,7 @@
           </div>
         </article>
       </div>
+      <div class="section-readmore"><a class="text-link" href="music.html">Explore 8B Music ↗</a></div>
     </section>
 
     <section class="about-section" id="about">
@@ -147,6 +149,7 @@
         <p class="eyebrow">04 / ABOUT 8B</p>
         <h2>One creative house.<br>Multiple ways to tell the story.</h2>
         <p>8B Production is an Atlanta-based creative media company working across photography, visual production, media and music. The goal is simple: create work that feels intentional, memorable and unmistakably yours.</p>
+        <a class="text-link" href="about.html">Meet the creative behind 8B ↗</a>
       </div>
     </section>
 
@@ -194,6 +197,8 @@
               <option>Creative Concept</option>
               <option>Brand / Business Content</option>
               <option>Media / Visual Production</option>
+              <option>Music Video</option>
+              <option>Music / Production / Engineering</option>
               <option>Other</option>
             </select>
           </label>
@@ -241,17 +246,10 @@
   </main>
 
   <footer>
-    <a class="brand footer-brand" href="index.html">
-      <img src="assets/images/8b-logo.jpg" alt="8B Production logo" />
-    </a>
-    <div class="footer-meta">
-      <a href="https://www.instagram.com/8b.productions/" target="_blank" rel="noopener">@8b.productions</a>
-      <a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><span>Atlanta, GA</span>
-      <span>© <span id="year"></span> 8B Production</span>
-    </div>
+    <a class="brand footer-brand" href="index.html" aria-label="8B Production home"><img src="assets/images/8b-logo.jpg" alt="8B Production logo" width="100" height="55"></a>
+    <div class="footer-meta"><a href="portfolio.html">Portfolio</a><a href="videos.html">Videos</a><a href="music.html">Music</a><a href="about.html">About</a><a href="contact.html">Book a Shoot</a><a href="https://www.instagram.com/8b.productions/" target="_blank" rel="noopener">@8b.productions</a><span>Atlanta, GA</span><span>© <span id="year"></span> 8B Production</span></div>
   </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
