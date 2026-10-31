@@ -1,0 +1,50 @@
+.screen-intro{padding:165px 4vw 70px;border-bottom:1px solid #292929}
+.screen-intro-line{display:grid;grid-template-columns:1.65fr 1fr;gap:6vw;align-items:end}
+.screen-intro h1{font:600 clamp(62px,8.5vw,128px)/.94 Oswald,Impact,sans-serif;letter-spacing:-.04em;margin:0}
+.screen-intro h1 span,.music-visuals h2 span,.home-film h2 span,.about-story h2 span{color:transparent;-webkit-text-stroke:1px #f1efe7}
+.screen-intro-line>p{color:#bcbab4;font-size:15px;line-height:1.9;margin:0;max-width:420px}
+.film-section{padding:55px 4vw 95px}
+.film-kicker,.section-caption{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:10px;letter-spacing:.16em;color:#aaa}
+.film-title{display:flex;justify-content:space-between;align-items:center;gap:25px;margin:25px 0 32px}
+.film-title h2{font:500 clamp(30px,4.3vw,64px)/1.1 Oswald,Impact,sans-serif;letter-spacing:-.02em;margin:0}
+.film-title h2 span{color:#aaa}
+.film-title>span{font-size:50px}
+.video-frame{position:relative;aspect-ratio:16/9;background:#101010;border:1px solid #292929;overflow:hidden;min-width:0}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.film-meta{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;font-size:10px;letter-spacing:.1em;color:#aaa;line-height:1.7}
+.film-meta a{color:#f1efe7;border-bottom:1px solid #555;padding-bottom:4px;min-height:24px}
+.music-artists{padding:60px 4vw 100px}
+.section-caption{margin-bottom:32px}
+.section-caption h2{font-size:11px;letter-spacing:.18em;font-weight:500;margin:0}
+.music-artists .artist-image{height:auto;aspect-ratio:1/1}
+.artist-card:first-child .artist-image img{object-position:75% 35%}
+.music-artists .artist-meta h3{font-size:clamp(40px,5vw,72px)}
+.music-artists .artist-meta p{font-size:11px}
+.music-visuals{border-top:1px solid #333;padding:85px 4vw;display:grid;grid-template-columns:1.5fr 1fr;gap:8vw;align-items:center}
+.music-visuals h2,.home-film h2,.about-story h2{font:600 clamp(42px,6vw,84px)/.98 Oswald,Impact,sans-serif;letter-spacing:-.03em;margin:0 0 30px}
+.music-visuals p:not(.eyebrow){color:#aaa;line-height:1.8;margin:0 0 28px}
+.about-opening p:not(.eyebrow){font-size:16px;color:#bbb;line-height:1.85;margin:0 0 23px}
+.about-opening .eyebrow{font-size:10px}
+.about-story{display:grid;grid-template-columns:1.2fr 1fr;gap:6vw;align-items:center;background:#f0ede4;color:#111;padding:85px 4vw}
+.about-story-photo img{height:auto;aspect-ratio:3/2;object-fit:contain}
+.about-story-copy h2{font-size:clamp(38px,4.5vw,64px)}
+.about-story-copy h2 span{-webkit-text-stroke-color:#111}
+.about-story-copy p:not(.eyebrow){color:#555;font-size:14px;line-height:1.85}
+.about-story-copy .text-link{display:inline-block;margin-top:20px;border-color:#555}
+.creative-directions{padding:80px 4vw;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3vw}
+.creative-directions>a{padding-top:25px;border-top:1px solid #444;display:flex;flex-direction:column;align-items:flex-start;gap:30px}
+.creative-directions>a>span:first-child{font-size:10px;letter-spacing:.15em;color:#aaa}
+.creative-directions h2{font:500 clamp(30px,4vw,56px)/1.05 Oswald,Impact,sans-serif;margin:0;letter-spacing:-.02em}
+.creative-directions>a>span:last-child{font-size:32px}
+.creative-directions>a:hover{border-color:#f1efe7}
+.booking-page{padding-top:175px}
+.booking-page h1{font:600 clamp(66px,11vw,170px)/.82 Oswald,Impact,sans-serif;letter-spacing:-.045em;margin:0 0 30px}
+.booking-page h1 span{color:transparent;-webkit-text-stroke:1.5px #eee}
+.home-film{padding:100px 4vw;display:grid;grid-template-columns:.8fr 1.5fr;gap:6vw;align-items:center;border-bottom:1px solid #292929}
+.home-film h2{font-size:clamp(48px,6vw,90px)}
+.home-film-heading>p:not(.eyebrow){font-size:10px;letter-spacing:.12em;color:#aaa;margin:0 0 35px}
+.home-film .video-frame{width:100%}
+.section-readmore{padding-top:40px}
+.about-copy .text-link{display:inline-block;margin-top:24px}
+@media(max-width:1000px){.screen-intro h1{font-size:clamp(54px,8.5vw,100px)}.screen-intro-line{gap:4vw}.about-story{grid-template-columns:1fr;gap:45px}.about-story-copy{max-width:680px}.music-artists .artist-meta{display:block}.music-artists .artist-meta p{margin-top:10px}}
+@media(max-width:600px){.screen-intro{padding:135px 5vw 50px}.screen-intro-line{grid-template-columns:1fr;gap:35px}.screen-intro h1{font-size:clamp(50px,12.8vw,76px)}.screen-intro-line>p{font-size:14px}.film-section{padding:35px 5vw 60px}.film-kicker{font-size:9px}.film-title{margin:22px 0}.film-title h2{font-size:32px}.film-title>span{font-size:32px}.film-meta{flex-wrap:wrap;gap:12px;font-size:9px}.film-meta a{margin-left:auto}.music-artists{padding:40px 5vw 60px}.music-artists .artist-grid{gap:45px}.section-caption>span{font-size:8px;max-width:110px;text-align:right;line-height:1.6}.music-visuals{padding:60px 5vw;grid-template-columns:1fr;gap:20px}.about-story{padding:60px 5vw}.creative-directions{padding:60px 5vw;grid-template-columns:1fr;gap:45px}.creative-directions>a{display:grid;grid-template-columns:1fr 35px;gap:20px}.creative-directions>a>span:first-child{grid-column:1/-1}.creative-directions h2{font-size:42px}.about-opening p:not(.eyebrow){font-size:15px}.booking-page{padding-top:135px}.booking-page h1{font-size:clamp(56px,13vw,78px)}.home-film{padding:70px 5vw;grid-template-columns:1fr;gap:35px}.home-film h2{font-size:64px}}
