@@ -53,3 +53,24 @@
 
 /* Fit the client-gallery navigation item on tablets. */
 @media(max-width:1040px){.nav{position:fixed;inset:72px 0 auto 0;background:#050505;padding:30px 5vw 40px;display:none;flex-direction:column;align-items:flex-start;border-bottom:1px solid #222}.nav.open{display:flex}.menu-toggle{display:block}.site-header{height:72px}.brand{width:90px;height:55px}}
+
+/* Selected photography: preserve each photograph's framing. */
+.home-refreshed .hero-media{background-image:url('../images/selected/8b-hero.webp');background-position:58% 30%}
+.home-refreshed .feature-image{min-height:0;aspect-ratio:4/5;overflow:hidden}
+.home-refreshed .feature-image img{object-position:center 18%}
+.gallery-card:focus-visible{outline-offset:-6px}
+.portfolio-grid{display:block;column-count:3;column-gap:22px}
+.portfolio-item{break-inside:avoid;margin:0 0 28px}
+.portfolio-item img{image-orientation:from-image}
+.lightbox{padding:16px;width:1200px;max-width:96vw;max-height:96svh;overflow:auto}
+.lightbox-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:12px}
+.lightbox .lightbox-counter{margin:0;color:#aaa;font-size:12px;font-variant-numeric:tabular-nums}
+.lightbox .lightbox-close{position:static;min-height:44px}
+.lightbox-stage{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:12px;touch-action:pan-y pinch-zoom}
+.lightbox-stage img{height:72svh;max-width:100%;object-fit:contain}
+.lightbox-prev,.lightbox-next{display:grid;place-items:center;min-height:48px;border:1px solid #555;background:#151515;color:#f1efe7;font-size:22px;cursor:pointer}
+.lightbox-prev:hover,.lightbox-next:hover{border-color:#f1efe7}
+.lightbox .lightbox-caption{margin:14px 0 0;line-height:1.6;color:#bbb}
+@media(max-width:1000px){.portfolio-grid{column-count:2}}
+@media(max-width:800px){.home-refreshed .hero-media{background-image:url('../images/selected/8b-6098-1600.webp');background-position:center 24%}.home-refreshed .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.94),rgba(0,0,0,.5) 45%,rgba(0,0,0,.1) 78%)}.home-refreshed .feature-image{aspect-ratio:2/3;max-height:none}}
+@media(max-width:600px){.portfolio-grid{column-count:1}.lightbox{padding:10px}.lightbox-stage{grid-template-columns:36px minmax(0,1fr) 36px;gap:5px}.lightbox-stage img{height:65svh}.lightbox-prev,.lightbox-next{font-size:18px;min-height:44px}}
