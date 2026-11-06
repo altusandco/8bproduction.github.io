@@ -83,9 +83,10 @@
 @media(max-width:800px){.home-refreshed .hero-media{background-image:url('../images/selected/8b-6098-1600.webp');background-position:center 24%}.home-refreshed .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.94),rgba(0,0,0,.5) 45%,rgba(0,0,0,.1) 78%)}.home-refreshed .feature-image{aspect-ratio:2/3;max-height:none}}
 @media(max-width:600px){.portfolio-grid{column-count:1}.lightbox{padding:10px}.lightbox-stage{grid-template-columns:36px minmax(0,1fr) 36px;gap:5px}.lightbox-stage img{height:65svh}.lightbox-prev,.lightbox-next{font-size:18px;min-height:44px}}
 
-/* Music submenu shares the main navigation on every page. */
+/* Shared dropdowns in the main navigation. */
+.nav-destination { scroll-margin-top: 90px; }
 .nav-group { position: relative; }
-.nav-group-label { display: flex; align-items: center; }
+.nav-group-label { display: flex; align-items: center; white-space: nowrap; }
 .nav-disclosure {
   display: grid;
   place-items: center;
@@ -119,6 +120,7 @@
   box-shadow: 0 12px 24px #0007;
 }
 .nav-submenu[hidden] { display: none; }
+.nav-group:nth-last-child(-n+2) .nav-submenu { left: auto; right: 0; }
 .nav .nav-submenu a {
   display: block;
   padding: 11px 12px;
@@ -127,7 +129,8 @@
 }
 .nav .nav-submenu a:hover, .nav .nav-submenu a[aria-current="page"] { background: #22211b; }
 @media (max-width: 1040px) {
-  .nav { max-height: calc(100dvh - 72px); overflow-y: auto; overscroll-behavior: contain; }
+  .nav { gap: 8px; max-height: calc(100dvh - 72px); overflow-y: auto; overscroll-behavior: contain; }
+  .nav > .nav-group .nav-group-label > a { display: flex; align-items: center; min-height: 44px; }
   .nav-group { width: 100%; }
   .nav-group-label { justify-content: space-between; }
   .nav-disclosure { width: 44px; min-height: 44px; border: 1px solid #3d3a32; }

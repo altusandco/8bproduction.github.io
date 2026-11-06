@@ -1,10 +1,52 @@
 const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
-function addMusicMenu() {
-  const music = nav.querySelector(':scope > a[href="music.html"]');
-  if (!music) return () => {};
+const submenus = {
+  'portfolio.html': [
+    ['Portraits & Creative', 'portfolio.html?category=portraits#portfolio-work'],
+    ['Fashion & Events', 'portfolio.html?category=fashion#portfolio-work'],
+    ['Professional & Groups', 'portfolio.html?category=professional#portfolio-work'],
+  ],
+  'videos.html': [
+    ['Featured Music Video', 'videos.html#featured-video'],
+    ['Plan a Music Video', 'videos.html#plan-a-video'],
+  ],
+  'music.html': [
+    ['Beats', 'beats.html'],
+    ['Music Videos', 'music.html#music-videos'],
+    ['Artists', 'music.html#artists'],
+  ],
+  'about.html': [
+    ['Meet Curtis', 'about.html#meet-curtis'],
+    ['The 8B Story', 'about.html#our-story'],
+    ['Explore 8B', 'about.html#explore-8b'],
+  ],
+  'services.html': [
+    ['Portraits & Headshots', 'services.html#portraits'],
+    ['Fashion & Brand', 'services.html#fashion'],
+    ['Events & Groups', 'services.html#events'],
+    ['FAQs', 'services.html#services-faq'],
+  ],
+  'client-galleries.html': [
+    ['Find Your Gallery', 'client-galleries.html#gallery-access'],
+    ['How Galleries Work', 'client-galleries.html#gallery-experience'],
+  ],
+  'contact.html': [
+    ['Booking Form', 'contact.html#booking-form'],
+    ['Email Booking', 'mailto:booking@8bproduction.com'],
+  ],
+};
 
+const desktopMenu = matchMedia('(min-width: 1041px)');
+let activeSubmenu;
+
+function closeSubmenu() {
+  if (!activeSubmenu) return;
+  activeSubmenu.setOpen(false);
+  activeSubmenu = undefined;
+}
+
+function addSubmenu(parentLink, items) {
   const group = document.createElement('div');
   group.className = 'nav-group';
   const label = document.createElement('div');
@@ -12,70 +54,89 @@ function addMusicMenu() {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'nav-disclosure';
-  button.setAttribute('aria-label', 'Music options');
-  button.setAttribute('aria-controls', 'music-options');
+  button.setAttribute('aria-label', `${parentLink.textContent.trim()} options`);
 
   const submenu = document.createElement('div');
   submenu.className = 'nav-submenu';
-  submenu.id = 'music-options';
-  for (const [text, href] of [
-    ['Beats', 'beats.html'],
-    ['Music Videos', 'music.html#music-videos'],
-    ['Artists', 'music.html#artists'],
-  ]) {
+  submenu.id = parentLink.getAttribute('href').replace('.html', '-options');
+  button.setAttribute('aria-controls', submenu.id);
+
+  for (const [text, href] of items) {
     const link = document.createElement('a');
     link.textContent = text;
     link.href = href;
-    if (location.pathname === new URL(href, location.href).pathname && !href.includes('#')) {
+    const destination = new URL(link.href);
+    if (destination.origin === location.origin && destination.pathname === location.pathname &&
+        !destination.search && !destination.hash) {
       link.setAttribute('aria-current', 'page');
     }
     submenu.append(link);
   }
 
-  music.before(group);
-  label.append(music, button);
+  parentLink.before(group);
+  label.append(parentLink, button);
   group.append(label, submenu);
 
+  const item = { setOpen };
   function setOpen(open) {
     submenu.hidden = !open;
     button.setAttribute('aria-expanded', String(open));
   }
+  function open() {
+    if (activeSubmenu === item) return;
+    closeSubmenu();
+    activeSubmenu = item;
+    setOpen(true);
+  }
+  function close() {
+    if (activeSubmenu === item) closeSubmenu();
+  }
+
   setOpen(false);
-  const desktop = matchMedia('(min-width: 1041px)');
   group.addEventListener('pointerenter', event => {
-    if (desktop.matches && event.pointerType === 'mouse') setOpen(true);
+    if (desktopMenu.matches && event.pointerType === 'mouse') open();
   });
   group.addEventListener('pointerleave', event => {
-    if (desktop.matches && event.pointerType === 'mouse' && !submenu.contains(document.activeElement)) setOpen(false);
+    if (desktopMenu.matches && event.pointerType === 'mouse' && !submenu.contains(document.activeElement)) close();
   });
   group.addEventListener('focusout', event => {
-    if (!group.contains(event.relatedTarget)) setOpen(false);
+    if (desktopMenu.matches && !group.contains(event.relatedTarget)) close();
   });
-  button.addEventListener('click', () => setOpen(submenu.hidden));
+  button.addEventListener('click', () => {
+    if (submenu.hidden) open();
+    else close();
+  });
   group.addEventListener('keydown', event => {
     if (event.key !== 'Escape' || submenu.hidden) return;
     event.preventDefault();
     event.stopPropagation();
-    setOpen(false);
+    close();
     button.focus();
   });
-  document.addEventListener('pointerdown', event => {
-    if (!group.contains(event.target)) setOpen(false);
-  });
-  desktop.addEventListener('change', () => setOpen(false));
-  return () => setOpen(false);
 }
 
-const closeMusicMenu = addMusicMenu();
+for (const link of nav.querySelectorAll(':scope > a[href]')) {
+  const items = submenus[link.getAttribute('href')];
+  if (items) addSubmenu(link, items);
+}
+
+nav.addEventListener('focusout', event => {
+  if (!nav.contains(event.relatedTarget)) closeSubmenu();
+});
+document.addEventListener('click', event => {
+  if (!nav.contains(event.target)) closeSubmenu();
+});
+desktopMenu.addEventListener('change', closeSubmenu);
+
 function closeMenu() {
-  closeMusicMenu();
+  closeSubmenu();
   nav.classList.remove('open');
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-label', 'Open menu');
 }
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
 header.classList.toggle('scrolled', window.scrollY > 40);
-toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); if (!open) closeMusicMenu(); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); });
+toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); if (!open) closeSubmenu(); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); });
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); toggle.focus(); } });
 document.querySelector('#year').textContent = new Date().getFullYear();
