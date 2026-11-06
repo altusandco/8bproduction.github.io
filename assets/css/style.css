@@ -82,3 +82,63 @@
 @media(max-width:1000px){.portfolio-grid{column-count:2}}
 @media(max-width:800px){.home-refreshed .hero-media{background-image:url('../images/selected/8b-6098-1600.webp');background-position:center 24%}.home-refreshed .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.94),rgba(0,0,0,.5) 45%,rgba(0,0,0,.1) 78%)}.home-refreshed .feature-image{aspect-ratio:2/3;max-height:none}}
 @media(max-width:600px){.portfolio-grid{column-count:1}.lightbox{padding:10px}.lightbox-stage{grid-template-columns:36px minmax(0,1fr) 36px;gap:5px}.lightbox-stage img{height:65svh}.lightbox-prev,.lightbox-next{font-size:18px;min-height:44px}}
+
+/* Music submenu shares the main navigation on every page. */
+.nav-group { position: relative; }
+.nav-group-label { display: flex; align-items: center; }
+.nav-disclosure {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  min-height: 36px;
+  margin-left: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f1efe7;
+  cursor: pointer;
+}
+.nav-disclosure::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.nav-disclosure[aria-expanded="true"]::before { transform: translateY(2px) rotate(225deg); }
+.nav-disclosure:focus-visible, .nav-submenu a:focus-visible { outline: 2px solid #f1efe7; outline-offset: 2px; }
+.nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 166px;
+  padding: 6px;
+  border: 1px solid #3d3a32;
+  background: #0b0b09;
+  box-shadow: 0 12px 24px #0007;
+}
+.nav-submenu[hidden] { display: none; }
+.nav .nav-submenu a {
+  display: block;
+  padding: 11px 12px;
+  border: 0;
+  white-space: nowrap;
+}
+.nav .nav-submenu a:hover, .nav .nav-submenu a[aria-current="page"] { background: #22211b; }
+@media (max-width: 1040px) {
+  .nav { max-height: calc(100dvh - 72px); overflow-y: auto; overscroll-behavior: contain; }
+  .nav-group { width: 100%; }
+  .nav-group-label { justify-content: space-between; }
+  .nav-disclosure { width: 44px; min-height: 44px; border: 1px solid #3d3a32; }
+  .nav-submenu {
+    position: static;
+    margin-top: 8px;
+    padding: 4px 0 4px 12px;
+    border: 0;
+    border-left: 1px solid #3d3a32;
+    background: transparent;
+    box-shadow: none;
+  }
+  .nav .nav-submenu a { min-height: 44px; padding: 13px 12px; }
+}

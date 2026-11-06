@@ -1,10 +1,81 @@
 const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
-function closeMenu() { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open menu'); }
+function addMusicMenu() {
+  const music = nav.querySelector(':scope > a[href="music.html"]');
+  if (!music) return () => {};
+
+  const group = document.createElement('div');
+  group.className = 'nav-group';
+  const label = document.createElement('div');
+  label.className = 'nav-group-label';
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'nav-disclosure';
+  button.setAttribute('aria-label', 'Music options');
+  button.setAttribute('aria-controls', 'music-options');
+
+  const submenu = document.createElement('div');
+  submenu.className = 'nav-submenu';
+  submenu.id = 'music-options';
+  for (const [text, href] of [
+    ['Beats', 'beats.html'],
+    ['Music Videos', 'music.html#music-videos'],
+    ['Artists', 'music.html#artists'],
+  ]) {
+    const link = document.createElement('a');
+    link.textContent = text;
+    link.href = href;
+    if (location.pathname === new URL(href, location.href).pathname && !href.includes('#')) {
+      link.setAttribute('aria-current', 'page');
+    }
+    submenu.append(link);
+  }
+
+  music.before(group);
+  label.append(music, button);
+  group.append(label, submenu);
+
+  function setOpen(open) {
+    submenu.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+  }
+  setOpen(false);
+  const desktop = matchMedia('(min-width: 1041px)');
+  group.addEventListener('pointerenter', event => {
+    if (desktop.matches && event.pointerType === 'mouse') setOpen(true);
+  });
+  group.addEventListener('pointerleave', event => {
+    if (desktop.matches && event.pointerType === 'mouse' && !submenu.contains(document.activeElement)) setOpen(false);
+  });
+  group.addEventListener('focusout', event => {
+    if (!group.contains(event.relatedTarget)) setOpen(false);
+  });
+  button.addEventListener('click', () => setOpen(submenu.hidden));
+  group.addEventListener('keydown', event => {
+    if (event.key !== 'Escape' || submenu.hidden) return;
+    event.preventDefault();
+    event.stopPropagation();
+    setOpen(false);
+    button.focus();
+  });
+  document.addEventListener('pointerdown', event => {
+    if (!group.contains(event.target)) setOpen(false);
+  });
+  desktop.addEventListener('change', () => setOpen(false));
+  return () => setOpen(false);
+}
+
+const closeMusicMenu = addMusicMenu();
+function closeMenu() {
+  closeMusicMenu();
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-label', 'Open menu');
+}
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
 header.classList.toggle('scrolled', window.scrollY > 40);
-toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); });
+toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); if (!open) closeMusicMenu(); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); });
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); toggle.focus(); } });
 document.querySelector('#year').textContent = new Date().getFullYear();

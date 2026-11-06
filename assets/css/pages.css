@@ -48,3 +48,12 @@
 .about-copy .text-link{display:inline-block;margin-top:24px}
 @media(max-width:1000px){.screen-intro h1{font-size:clamp(54px,8.5vw,100px)}.screen-intro-line{gap:4vw}.about-story{grid-template-columns:1fr;gap:45px}.about-story-copy{max-width:680px}.music-artists .artist-meta{display:block}.music-artists .artist-meta p{margin-top:10px}}
 @media(max-width:600px){.screen-intro{padding:135px 5vw 50px}.screen-intro-line{grid-template-columns:1fr;gap:35px}.screen-intro h1{font-size:clamp(50px,12.8vw,76px)}.screen-intro-line>p{font-size:14px}.film-section{padding:35px 5vw 60px}.film-kicker{font-size:9px}.film-title{margin:22px 0}.film-title h2{font-size:32px}.film-title>span{font-size:32px}.film-meta{flex-wrap:wrap;gap:12px;font-size:9px}.film-meta a{margin-left:auto}.music-artists{padding:40px 5vw 60px}.music-artists .artist-grid{gap:45px}.section-caption>span{font-size:8px;max-width:110px;text-align:right;line-height:1.6}.music-visuals{padding:60px 5vw;grid-template-columns:1fr;gap:20px}.about-story{padding:60px 5vw}.creative-directions{padding:60px 5vw;grid-template-columns:1fr;gap:45px}.creative-directions>a{display:grid;grid-template-columns:1fr 35px;gap:20px}.creative-directions>a>span:first-child{grid-column:1/-1}.creative-directions h2{font-size:42px}.about-opening p:not(.eyebrow){font-size:15px}.booking-page{padding-top:135px}.booking-page h1{font-size:clamp(56px,13vw,78px)}.home-film{padding:70px 5vw;grid-template-columns:1fr;gap:35px}.home-film h2{font-size:64px}}
+
+.music-lead p:not(.eyebrow) {
+  max-width: 380px;
+  margin: 8px 0 22px;
+  color: #bcbab4;
+  font-size: 15px;
+  line-height: 1.7;
+}
+#music-videos, #artists { scroll-margin-top: 90px; }
