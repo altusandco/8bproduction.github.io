@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beats — 8B Production</title>
+  <meta name="description" content="Preview instrumentals from 8B Production and sign up to download your favorites.">
+  <link rel="canonical" href="https://8bproduction.com/beats.html">
+  <meta property="og:title" content="Beats — 8B Production">
+  <meta property="og:description" content="Preview instrumentals from 8B Production and sign up to download your favorites.">
+  <meta property="og:image" content="https://8bproduction.com/assets/images/kvrt-2026-1440.webp">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/beats.css">
+  <meta name="beats-api" content="https://eightb-client-delivery.info-c79e.chatgpt.site">
+  <meta name="referrer" content="no-referrer">
+</head>
+<body class="detail-page">
+  <a class="site-skip" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="8B Production home"><img src="assets/images/8b-logo.jpg" alt="8B Production logo" width="118" height="68"></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="videos.html">Videos</a>
+      <a href="music.html" class="beat-parent-link">Music</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="client-galleries.html">Client Galleries</a>
+      <a href="contact.html" class="nav-cta">Book a Shoot</a>
+    </nav>
+  </header>
+  <main id="main">
+
+    <section class="beat-hero" aria-labelledby="beats-title">
+      <div>
+        <a class="beat-back" href="music.html">← Back to Music</a>
+        <p class="eyebrow">8B PRODUCTION / BEAT CATALOG</p>
+        <h1 id="beats-title">FIND YOUR <span>SOUND.</span></h1>
+        <p class="beat-intro">Preview the instrumentals. When you hear one you want to work with, sign up to download the full beat.</p>
+        <a class="btn btn-light" href="#beat-catalog">Explore the beats ↓</a>
+      </div>
+      <div class="beat-art" aria-hidden="true">
+        <span>8B / INSTRUMENTALS</span>
+        <svg viewBox="0 0 280 145" role="presentation"><path d="M8 70v6m12-12v18m12-26v34m12-48v62m12-85v108m12-67v26m12-46v66m12-91v116m12-98v80m12-57v34m12-46v58m12-75v92m12-108v124m12-96v68m12-48v28m12-40v52m12-64v76m12-92v108m12-85v62m12-46v30m12-41v52m12-38v24m12-16v8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>ATLANTA, GA <b>01 / SOUND</b></span>
+      </div>
+    </section>
+    <section id="beat-catalog" class="beat-catalog" aria-labelledby="catalog-title">
+      <div class="section-caption"><h2 id="catalog-title">THE BEATS</h2><span id="beat-count">8B PRODUCTION</span></div>
+      <p id="beat-status" class="beat-status" role="status">Loading the beat catalog…</p>
+      <button id="beat-retry" class="btn btn-light" hidden>Try again</button>
+      <div id="beat-grid" class="beat-grid"></div>
+    </section>
+    <dialog id="beat-dialog" class="beat-dialog" aria-labelledby="beat-dialog-title">
+      <button type="button" class="beat-close" aria-label="Close download">×</button>
+      <p class="eyebrow">8B / BEAT DOWNLOAD</p>
+      <h2 id="beat-dialog-title">Get the beat</h2>
+      <p id="beat-terms" class="beat-terms" hidden></p>
+      <form id="beat-signup">
+        <label for="beat-email">Email address</label>
+        <input type="email" id="beat-email" name="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
+        <p class="beat-privacy">8B Production saves your email and the beat you choose as a download signup.</p>
+        <button class="btn btn-light" type="submit">Unlock download →</button>
+      </form>
+      <p id="beat-signup-status" role="status"></p>
+      <a id="beat-download" class="btn btn-light" rel="noreferrer" hidden>Download MP3 ↓</a>
+    </dialog>
+
+  </main>
+  <footer>
+    <a class="brand footer-brand" href="index.html" aria-label="8B Production home"><img src="assets/images/8b-logo.jpg" alt="8B Production logo" width="100" height="55"></a>
+    <div class="footer-meta"><a href="portfolio.html">Portfolio</a><a href="videos.html">Videos</a><a href="music.html">Music</a><a href="about.html">About</a><a href="contact.html">Book a Shoot</a><a href="https://www.instagram.com/8b.productions/" target="_blank" rel="noopener">@8b.productions</a><span>Atlanta, GA</span><span>© <span id="year"></span> 8B Production</span></div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/beats.js"></script>
+</body>
+</html>

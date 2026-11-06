@@ -1,0 +1,102 @@
+.beat-parent-link { color: #f3eee1; }
+.beat-hero, .beat-catalog {
+  width: min(100% - 48px, 1240px);
+  margin-inline: auto;
+}
+.beat-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 6vw, 90px);
+  padding: calc(92px + clamp(32px, 5vw, 72px)) 0 clamp(54px, 8vw, 116px);
+}
+.beat-back {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #c9c4b6;
+  font-size: 13px;
+}
+.beat-hero h1 {
+  margin: 12px 0 18px;
+  font: 600 clamp(60px, 9vw, 134px)/.94 Oswald, sans-serif;
+  letter-spacing: -.045em;
+}
+.beat-hero h1 span {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px #f3eee1;
+}
+.beat-intro { max-width: 410px; color: #bdb7aa; font-size: 15px; line-height: 1.75; margin: 0 0 26px; }
+.beat-art {
+  display: grid;
+  gap: 32px;
+  align-content: space-between;
+  min-height: 280px;
+  aspect-ratio: 1.12;
+  padding: 22px;
+  border: 1px solid #484439;
+  background: repeating-linear-gradient(90deg, transparent 0 35px, #ffffff0a 35px 36px), #14130f;
+  color: #c7bea4;
+}
+.beat-art span { display: flex; justify-content: space-between; gap: 12px; font: 500 11px Inter, sans-serif; letter-spacing: .17em; }
+.beat-art b { font-weight: 500; color: #e9e3d3; }
+.beat-art svg { display: block; width: 100%; max-height: 190px; }
+.beat-catalog { padding-bottom: 86px; scroll-margin-top: 100px; }
+.beat-catalog .section-caption h2 { font-size: clamp(25px, 4vw, 42px); }
+.beat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; }
+.beat-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #3c3930;
+  background: #14130f;
+  overflow-wrap: anywhere;
+}
+.beat-meta { font-size: 12px; color: #bfb7a4; line-height: 1.5; margin: 0; }
+.beat-card h3 { font: 600 clamp(28px, 4vw, 44px)/1.1 Oswald, sans-serif; margin: 12px 0 8px; }
+.beat-card audio { display: block; width: 100%; margin: 20px 0 16px; height: 44px; }
+.beat-card button, .beat-dialog .btn { min-height: 44px; cursor: pointer; }
+.beat-status { color: #c7c0b0; padding: 16px 0; line-height: 1.6; }
+.beat-status:empty { display: none; }
+.beat-dialog {
+  width: min(calc(100% - 28px), 480px);
+  max-height: calc(100dvh - 28px);
+  margin: auto;
+  padding: clamp(22px, 5vw, 36px);
+  border: 1px solid #68604e;
+  color: #f3eee1;
+  background: #161510;
+  overflow: auto;
+}
+.beat-dialog::backdrop { background: #000b; }
+.beat-dialog h2 { font: 600 38px/1.1 Oswald, sans-serif; margin: 12px 32px 18px 0; overflow-wrap: anywhere; }
+.beat-dialog label { display: block; font-size: 13px; margin-bottom: 8px; }
+.beat-dialog input {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #77705c;
+  background: #0b0b09;
+  color: #f3eee1;
+  font: inherit;
+}
+.beat-privacy, .beat-terms, #beat-signup-status { font-size: 13px; line-height: 1.6; color: #ccc5b5; margin: 12px 0; }
+.beat-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #67614f;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 25px;
+}
+.beat-dialog [hidden], .beat-catalog [hidden] { display: none; }
+@media (max-width: 700px) {
+  .beat-hero, .beat-catalog { width: calc(100% - 32px); }
+  .beat-hero { grid-template-columns: minmax(0, 1fr); padding: 104px 0 52px; }
+  .beat-art { min-height: 170px; aspect-ratio: auto; gap: 16px; }
+  .beat-art svg { max-height: 100px; }
+  .beat-card { padding: 18px; }
+}
