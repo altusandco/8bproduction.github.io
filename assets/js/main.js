@@ -31,10 +31,6 @@ const submenus = {
     ['Find Your Gallery', 'client-galleries.html#gallery-access'],
     ['How Galleries Work', 'client-galleries.html#gallery-experience'],
   ],
-  'contact.html': [
-    ['Booking Form', 'contact.html#booking-form'],
-    ['Email Booking', 'mailto:booking@8bproduction.com'],
-  ],
 };
 
 const desktopMenu = matchMedia('(min-width: 1041px)');
