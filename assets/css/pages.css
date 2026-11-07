@@ -57,3 +57,15 @@
   line-height: 1.7;
 }
 #music-videos, #artists { scroll-margin-top: 90px; }
+
+/* Use the artwork's light areas as the homepage header mark. */
+@supports (mask-mode: luminance) {
+  .home-refreshed .site-header .brand img { display: none; }
+  .home-refreshed .site-header .brand::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: #f1efe7;
+    mask: url("../images/8b-logo.jpg") center / contain no-repeat luminance;
+  }
+}
