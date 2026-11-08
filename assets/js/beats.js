@@ -101,7 +101,7 @@ signup.addEventListener('submit', async event => {
     download.href = link.href;
     download.hidden = false;
     signup.hidden = true;
-    signupStatus.textContent = `Your MP3 is ready. This link works for ${data.expiresInMinutes} minutes.`;
+    signupStatus.textContent = `Your download is ready. This link works for ${data.expiresInMinutes} minutes.`;
     download.focus();
   } catch (error) {
     if (!controller.signal.aborted) signupStatus.textContent = error.message;
