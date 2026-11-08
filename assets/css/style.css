@@ -63,7 +63,7 @@
 @media(min-width:1041px) and (max-width:1200px){.nav{font-size:12px;gap:16px}}
 
 /* Selected photography: preserve each photograph's framing. */
-.home-refreshed .hero-media{background-image:url('../images/selected/8b-hero.webp');background-position:58% 30%}
+.home-refreshed .hero-media{background-image:url('../images/stock/home-hero.webp');background-position:62% 39%}
 .home-refreshed .feature-image{min-height:0;aspect-ratio:4/5;overflow:hidden}
 .home-refreshed .feature-image img{object-position:center 18%}
 .gallery-card:focus-visible{outline-offset:-6px}
@@ -80,7 +80,7 @@
 .lightbox-prev:hover,.lightbox-next:hover{border-color:#f1efe7}
 .lightbox .lightbox-caption{margin:14px 0 0;line-height:1.6;color:#bbb}
 @media(max-width:1000px){.portfolio-grid{column-count:2}}
-@media(max-width:800px){.home-refreshed .hero-media{background-image:url('../images/selected/8b-6098-1600.webp');background-position:center 24%}.home-refreshed .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.94),rgba(0,0,0,.5) 45%,rgba(0,0,0,.1) 78%)}.home-refreshed .feature-image{aspect-ratio:2/3;max-height:none}}
+@media(max-width:800px){.home-refreshed .hero-media{background-image:url('../images/stock/home-hero-mobile.webp');background-position:center 24%}.home-refreshed .hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.94),rgba(0,0,0,.5) 45%,rgba(0,0,0,.1) 78%)}.home-refreshed .feature-image{aspect-ratio:2/3;max-height:none}}
 @media(max-width:600px){.portfolio-grid{column-count:1}.lightbox{padding:10px}.lightbox-stage{grid-template-columns:36px minmax(0,1fr) 36px;gap:5px}.lightbox-stage img{height:65svh}.lightbox-prev,.lightbox-next{font-size:18px;min-height:44px}}
 
 /* Shared dropdowns in the main navigation. */
